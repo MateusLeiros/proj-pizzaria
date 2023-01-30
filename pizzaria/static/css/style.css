@@ -1,0 +1,94 @@
+/*
+The colors so far:
+#8AEA92 - Light green
+#5D3A00 - Pullman Brown Ups Brown
+#F7CB15 - Jonquil
+#F1F1F1 - Cultured
+#FF0000 - Red
+#4E878C - Steel Teal
+#40434E - Charcoal
+*/
+
+/********************  *******************/
+
+/******************** NAVBAR *******************/
+
+.navbar{
+    background-color: #F1F1F1;
+    height: 7vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: sticky;
+    top: 0;
+}
+
+.title{
+    display: inline-block;
+    width: 20vw;
+    font-size: 26px;
+    color: #5D3A00;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.navbar .link{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 20vh;
+    color: #FF0000;
+}
+
+.navbar .link:hover{
+    color: #F7CB15;
+    background-color: #FF0000;
+}
+
+
+
+/******************** CARDS *******************/
+
+.width-all{
+    display:inline-block;
+    margin-left: 4.5vw;
+    margin-right: 4.5vw;
+    width:90vw;
+}
+
+.width-2{
+    display:inline-block;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width:45vw;
+}
+
+.width-3{
+    display:inline-block;
+    margin-left: 1.4vw;
+    margin-right: 1.4vw;
+    width:30vw;
+}
+
+.width-4{
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width:22vw;
+}
+
+.card{
+    background-color: #4E878C;
+}
+
+.card-title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: 28px;
+    color: #F1F1F1;
+}
+
+.card-topic{
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: 18px;
+    color: #F1F1F1;
+    text-align: center;
+}

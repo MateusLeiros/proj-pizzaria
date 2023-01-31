@@ -1,19 +1,25 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/clear.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/reset.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/style.css' %}"
+    />
     <title>KIWI PIZZA</title>
-</head>
-<body>
+  </head>
+  <body>
     {% include 'accounts/navbar.html' %}
+    <div class="content">{% block content %}{% endblock %}</div>
+    <hr />
 
-    {% block content %}{% endblock %}
-
-    <hr>
-    
     <h5>FOOTER</h5>
-</body>
+  </body>
 </html>

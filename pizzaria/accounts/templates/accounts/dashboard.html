@@ -1,10 +1,6 @@
-{% extends 'accounts/main.html' %}
+{% extends 'accounts/main.html' %} {% block content %} {% include 'accounts/status.html' %}
 
-{% block content %}
-
-{% include 'accounts/status.html' %}
-
-    <h1>DASHBOARD</h1>
+<!-- <h1>DASHBOARD</h1>
     <hr>
 
     <div class="card width-2">
@@ -92,7 +88,98 @@
     <div class="botoes">
         <button class="btn create">Create customer</button>
         <button class="btn delete">Create order</button>
-    </div>
+    </div> -->
 
+<h1>DASHBOARD</h1>
+<hr />
+
+<div class="flex-dashboard">
+  <div class="flex-item">
+    <div class="card-title-1">Customers</div>
+    <div class="big-table">
+      <table>
+        <tr>
+          <th class="card-topic">Customer</th>
+          <th class="card-topic">Orders</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="flex-item">
+    <div class="card-title-1">Last 5 orders</div>
+    <div class="big-table">
+      <table>
+        <tr>
+          <th class="card-topic">Product</th>
+          <th class="card-topic">Date ordered</th>
+          <th class="card-topic">Status</th>
+          <th class="card-topic">Update</th>
+          <th class="card-topic">Delete</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+          <td>B</td>
+          <td>A</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="botoes">
+    <button class="btn create">Create customer</button>
+    <button class="btn delete">Create order</button>
+</div>
 
 {% endblock %}

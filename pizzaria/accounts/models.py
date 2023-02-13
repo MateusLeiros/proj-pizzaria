@@ -28,8 +28,12 @@ class Pizza(models.Model):
     valor = models.FloatField(null=True)
     tamanho = models.CharField(max_length=200, null=True, choices=TAMANHO)
     categoria = models.CharField(max_length=200, null=True, choices=CATEGORIA)
-    descricao = models.CharField(max_length=200, null=True)
+    descricao = models.CharField(max_length=200, null=True, blank=True)
     data_criado = models.DateTimeField(auto_now_add=True, null=True)
+
+    
+    def __str__(self):
+        return self.nome
 
 class Pedido(models.Model):
     STATUS = (
@@ -38,7 +42,7 @@ class Pedido(models.Model):
         ('Entregue', 'Entregue'),
     )
 
-    #cliente = 
-    #pizza = 
+    cliente = models.ForeignKey(Cliente, null=True, on_delete=models.SET_NULL)
+    pizza = models.ManyToManyField(Pizza)
     data_criado = models.DateTimeField(auto_now_add=True, null=True)
     status = models.CharField(max_length=200, null=True, choices=STATUS)

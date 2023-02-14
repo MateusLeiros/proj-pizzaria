@@ -213,7 +213,7 @@ th {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40%;
+  gap: 30%;
 }
 
 .btn {

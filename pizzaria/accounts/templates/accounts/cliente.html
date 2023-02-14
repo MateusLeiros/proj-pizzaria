@@ -1,0 +1,45 @@
+{% extends 'accounts/main.html' %} {% block content %}
+<div class="flex-dashboard">
+  <div class="card flex-item">
+    <div class="card-title-1">Customer:</div>
+    <div class="botoes">
+      <button class="btn update">Update Customer</button>
+      <button class="btn delete">Delete Customer</button>
+    </div>
+  </div>
+  <div class="card flex-item">
+    <div class="card-title-1">Contact:</div>
+    <h4>Email: {{cliente.nome}}</h4>
+    <h4>Phone number: {{cliente.telefone}}</h4>
+  </div>
+  <div class="card flex-item">
+    <div class="card-title-1">Total orders</div>
+    <h1>{{pedidos_count}}</h1>
+  </div>
+</div>
+<hr />
+<button class="btn create">Search</button>
+<hr />
+
+<h1>Orders table</h1>
+<table>
+  <tr>
+    <th>Pizza</th>
+    <th>Valor total</th>
+    <th>Horario do pedido</th>
+    <th>Status</th>
+    <th>Atualizar</th>
+    <th>Remover</th>
+  </tr>
+  {% for pedido in pedidos %}
+  <tr>
+    <td>{% for pizza in pedido.pizza.all %} {{pizza}} {% endfor %}</td>
+    <td>Valor total</td>
+    <td>{{pedido.data_criado}}</td>
+    <td>{{pedido.status}}</td>
+    <td><button class="btn update">Atualizar</button></td>
+    <td><button class="btn delete">Remover</button></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

@@ -19,5 +19,11 @@ def products(request):
     pizzas = Pizza.objects.all()
     return render(request, 'accounts/products.html', {'pizzas':pizzas})
 
-def customer(request):
-    return render(request, 'accounts/customer.html')
+def cliente(request, pk):
+    cliente = Cliente.objects.get(id=pk)
+    pedidos = cliente.pedido_set.all()
+    pedidos_count = pedidos.count()
+
+
+    context = {'cliente':cliente, 'pedidos':pedidos, 'pedidos_count':pedidos_count}
+    return render(request, 'accounts/cliente.html', context)

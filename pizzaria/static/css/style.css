@@ -252,3 +252,16 @@ th {
   border-color: #a50000;
   border-width: 3px;
 }
+
+.update {
+  background-color: #ffd52e;
+  color: #40434e;
+  border-radius: 3px;
+  border-style: none;
+}
+
+.update:hover {
+  border-style: solid;
+  border-color: #dbb20e;
+  border-width: 3px;
+}

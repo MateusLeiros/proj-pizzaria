@@ -1,95 +1,5 @@
 {% extends 'accounts/main.html' %} {% block content %} {% include 'accounts/status.html' %}
 
-<!-- <h1>DASHBOARD</h1>
-    <hr>
-
-    <div class="card width-2">
-        <div class="card-title-1">Customers</div>
-        <div class="big-table">
-            <table>
-                <tr>
-                    <th class="card-topic">Customer</th>
-                    <th class="card-topic">Orders</th>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div class="card width-2">
-        <div class="card-title-1">Last 5 orders</div>
-        <div class="big-table">
-            <table>
-                <tr>
-                    <th class="card-topic">Product</th>
-                    <th class="card-topic">Date ordered</th>
-                    <th class="card-topic">Status</th>
-                    <th class="card-topic">Update</th>
-                    <th class="card-topic">Delete</th>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>A</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div class="botoes">
-        <button class="btn create">Create customer</button>
-        <button class="btn delete">Create order</button>
-    </div> -->
-
 <h1>DASHBOARD</h1>
 <hr />
 
@@ -102,26 +12,12 @@
           <th class="card-topic">Customer</th>
           <th class="card-topic">Orders</th>
         </tr>
+        {% for cliente in clientes %}
         <tr>
-          <td>A</td>
-          <td>B</td>
+          <td>{{cliente.nome}}</td>
+          <td>{{cliente.telefone}}</td>
         </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-        </tr>
+        {% endfor %}
       </table>
     </div>
   </div>
@@ -137,49 +33,27 @@
           <th class="card-topic">Update</th>
           <th class="card-topic">Delete</th>
         </tr>
+        {% for pedido in pedidos %}
         <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
+          <td>Resumo do pedido</td>
+          <td>{{pedido.data_criado}}</td>
+          <td>{{pedido.status}}</td>
+          <td>
+            <a href=""><button class="btn update">Atualizar</button></a>
+          </td>
+          <td>
+            <a href=""><button class="btn delete">Deletar</button></a>
+          </td>
         </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-          <td>B</td>
-          <td>A</td>
-        </tr>
+        {% endfor %}
       </table>
     </div>
   </div>
 </div>
 
 <div class="botoes">
-    <button class="btn create">Create customer</button>
-    <button class="btn delete">Create order</button>
+  <button class="btn create">Create customer</button>
+  <button class="btn create">Create order</button>
 </div>
 
 {% endblock %}

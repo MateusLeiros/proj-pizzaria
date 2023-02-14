@@ -10,9 +10,25 @@
 <div class="card">
   <div class="card-title-1">PRODUCTS</div>
   <div class="flex-dashboard">
-    <div class="flex-item"><div class="card-topic">pizza</div></div>
+    <!-- <div class="flex-item"><div class="card-topic">pizza</div></div>
     <div class="flex-item"><div class="card-topic">categoria</div></div>
-    <div class="flex-item"><div class="card-topic">preco</div></div>
-  </div>
+    <div class="flex-item"><div class="card-topic">preco</div></div> -->
+      <table>
+        <tr>
+          <th>Categoria</th>
+          <th>Pizza</th>
+          <th>Tamanho</th>
+          <th>Preço</th>
+        </tr>
+        {% for i in pizzas %}
+        <tr>
+          <td>{{i.categoria}}</td>
+          <td>{{i.nome}}</td>
+          <td>{{i.tamanho}}</td>
+          <td>R${{i.valor}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
 </div>
 {% endblock %}

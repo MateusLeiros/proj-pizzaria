@@ -37,8 +37,12 @@
     <td>Valor total</td>
     <td>{{pedido.data_criado}}</td>
     <td>{{pedido.status}}</td>
-    <td><button class="btn update">Atualizar</button></td>
-    <td><button class="btn delete">Remover</button></td>
+    <td>
+      <a href="{% url 'atualizar_pedido' pedido.id %}"><button class="btn update">Atualizar</button></a>
+    </td>
+    <td>
+      <a href="{% url 'deletar_pedido' pedido.id %}"><button class="btn delete">Deletar</button></a>
+    </td>
   </tr>
   {% endfor %}
 </table>

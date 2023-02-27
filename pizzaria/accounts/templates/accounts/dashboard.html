@@ -41,10 +41,10 @@
           <td>{{pedido.data_criado}}</td>
           <td>{{pedido.status}}</td>
           <td>
-            <a href=""><button class="btn update">Atualizar</button></a>
+            <a href="{% url 'atualizar_pedido' pedido.id %}"><button class="btn update">Atualizar</button></a>
           </td>
           <td>
-            <a href=""><button class="btn delete">Deletar</button></a>
+            <a href="{% url 'deletar_pedido' pedido.id %}"><button class="btn delete">Deletar</button></a>
           </td>
         </tr>
         {% endfor %}
@@ -55,7 +55,9 @@
 
 <div class="botoes">
   <button class="btn create">Create customer</button>
-  <button class="btn create">Create order</button>
+  <a href="{% url 'criar_pedido' %}"
+    ><button class="btn create">Criar pedido</button></a
+  >
 </div>
 
 {% endblock %}

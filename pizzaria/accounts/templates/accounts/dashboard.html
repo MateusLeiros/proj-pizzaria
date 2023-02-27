@@ -5,15 +5,17 @@
 
 <div class="flex-dashboard">
   <div class="flex-item">
-    <div class="card-title-1">Customers</div>
+    <div class="card-title-1">Clientes</div>
     <div class="big-table">
       <table>
         <tr>
-          <th class="card-topic">Customer</th>
-          <th class="card-topic">Orders</th>
+          <th></th>
+          <th class="card-topic">Cliente</th>
+          <th class="card-topic">Pedido</th>
         </tr>
         {% for cliente in clientes %}
         <tr>
+          <td><a href="{% url 'cliente' cliente.id %}">Visitar</a></td>
           <td>{{cliente.nome}}</td>
           <td>{{cliente.telefone}}</td>
         </tr>

@@ -1,0 +1,277 @@
+/********************  *******************/
+/******************** MAIN *******************/
+
+body {
+  background-color: #4e878c;
+}
+
+.content {
+  padding-top: 2vh;
+}
+
+/******************** END MAIN *******************/
+/******************** CORES DE FUNDO *******************/
+
+.fundo-amarelo {
+  background-color: #f7cb15;
+}
+
+.fundo-vermelho {
+  background-color: #ff0000;
+}
+
+.fundo-verde {
+  background-color: #8aea92;
+}
+
+/******************** END CORES DE FUNDO *******************/
+/******************** NAVBAR *******************/
+
+.navbar {
+  display: flex;
+  background-color: #f1f1f1;
+  min-height: 7vh;
+  font-family: "Merienda";
+  position: sticky;
+  top: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  width: 350px;
+}
+
+.navbar ul li {
+  position: relative;
+  list-style: none;
+  width: 350px;
+  height: 7vh;
+  z-index: 1;
+}
+
+.navbar ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 7vh;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.navbar ul li a .icon img {
+  height: 5vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar ul li.active a .icon {
+  transform: translateY(50%);
+  background-color: #4e878c;
+}
+
+.navbar ul li a .text {
+  position: absolute;
+  color: red;
+  font-weight: 500;
+  font-size: 1.4em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.navbar ul li.active a .text {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+/* .indicator {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  bottom: -40%;
+  left: 29.7%;
+  background: #4e878c;
+  border-radius: 50%;
+  border: 6px solid #f1f1f1;
+  transition: 0.5s;
+}
+
+.navbar ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(175px * 0));
+}
+.navbar ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(175px * 1));
+} */
+
+.logo {
+  padding: 4px;
+  height: 7vh;
+}
+
+.title {
+  font-size: 2em;
+  font-family: "Parisienne";
+  padding-right: 10vw;
+}
+
+.links {
+  font-size: 1.4em;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 5vw;
+}
+
+.link a {
+  text-decoration: none;
+  color: #ff0000;
+}
+
+.link a:hover {
+  color: #f7cb15;
+  background-color: #ff0000;
+}
+
+/******************** END NAVBAR *******************/
+/******************** CARDS *******************/
+
+.flex-many-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 3vw;
+}
+
+.flex-card {
+  flex: 1;
+  flex-direction: column;
+  margin: 10px;
+  display: flex;
+  background-color: #f1f1f1;
+  color: #40434e;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px #40434e;
+  min-height: 240px;
+  min-width: 340px;
+  align-items: center;
+}
+
+.card-title {
+  font-family: "Merienda";
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  align-self: stretch;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bolder;
+}
+
+.flex-card h1 {
+  font-size: 5em;
+  margin: auto;
+}
+
+/******************** END CARDS *******************/
+/******************** BOTÕES *******************/
+
+.botoes {
+  display: flex;
+  flex: 1;
+  gap: 30%;
+  justify-content: center;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  box-shadow: 2px 2px 2px #40434e;
+  font-weight: bold;
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px 2px #40434e;
+}
+
+.create {
+  background-color: #8aea92;
+  color: #40434e;
+  border-radius: 3px;
+  border-style: none;
+}
+
+.create:hover {
+  border-style: solid;
+  border-color: #60a566;
+  border-width: 3px;
+}
+
+.delete {
+  background-color: #ff0000;
+  color: #f1f1f1;
+  border-radius: 3px;
+  border-style: none;
+}
+
+.delete:hover {
+  border-style: solid;
+  border-color: #a50000;
+  border-width: 3px;
+}
+
+.update {
+  background-color: #ffd52e;
+  color: #40434e;
+  border-radius: 3px;
+  border-style: none;
+}
+
+.update:hover {
+  border-style: solid;
+  border-color: #dbb20e;
+  border-width: 3px;
+}
+
+/******************** END BOTÕES *******************/
+/******************** TABELAS *******************/
+
+table,
+th,
+td {
+  border-style: solid;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-color: black;
+  margin: 1vh 1vh;
+}
+
+.big-table {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding-top: 1rem; */
+}
+
+/* .big-table > * {
+  scroll-snap-align: start;
+} */
+/******************** END TABELAS *******************/

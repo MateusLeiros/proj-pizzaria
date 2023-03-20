@@ -1,7 +1,25 @@
 {% load static %}
 <div class="navbar">
-  <img src="{% static '/images/kiwi-logo.png' %}" class="icon" alt="" />
-  <div class="title">Kiwi Pizza</div>
-  <a href="{% url 'home' %}"><div class="link">Dashboard</div></a>
-  <a href="{% url 'products' %}"><div class="link">Products</div></a>
+  <img src="{% static '/images/kiwi-logo.png' %}" class="logo" alt="" />
+  <div class="title">Kiwi's Pizza</div>
+  <!-- <div class="links">
+    <div class="link"><a href="{% url 'home' %}">Dashboard</a></div>
+    <div class="link"><a href="{% url 'products' %}">Products</a></div>
+  </div> -->
+
+  <ul>
+    <li class="list active">
+      <a href="#">
+        <span class="text">DASHBOARD</span>
+        <span class="icon"><img src="{% static '/images/dashboard.png' %}" alt=""/></span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#">
+        <span class="text">PRODUCTS</span>
+        <span class="icon"><img src="{% static '/images/products.png' %}" alt=""/></span>
+      </a>
+    </li>
+    <div class="indicator"></div>
+  </ul>
 </div>
